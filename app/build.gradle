@@ -9,7 +9,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
   compileSdkVersion 26
   defaultConfig {
-    applicationId "com.test.kotlinlistview"
+    applicationId "com.test.kotlin"
     minSdkVersion 15
     targetSdkVersion 26
     versionCode 1
@@ -39,7 +39,7 @@ dependencies {
   androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
 
   //kotlin
-  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+ // implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
   //design
   implementation 'com.android.support:design:26.1.0'
@@ -59,9 +59,9 @@ dependencies {
 
   //dagger 2
   implementation 'com.google.dagger:dagger:2.13'
-  annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
-  annotationProcessor 'com.google.dagger:dagger-android-processor:2.13'
-  compile 'com.google.dagger:dagger-android-support:2.13'
+  //annotationProcessor 'com.google.dagger:dagger-compiler:2.13'
+  //annotationProcessor 'com.google.dagger:dagger-android-processor:2.13'
+  implementation 'com.google.dagger:dagger-android-support:2.13'
   kapt 'com.google.dagger:dagger-compiler:2.13'
   kapt 'com.google.dagger:dagger-android-processor:2.13'
 
