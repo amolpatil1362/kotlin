@@ -40,7 +40,7 @@ class MainPresenter @Inject constructor(
   private fun getMovieDetails(genreList: List<Genre>?) {
 
     Observable.from(genreList)
-         .observeOn(Schedulers.newThread())
+        .observeOn(Schedulers.newThread())
         //.subscribeOn(Schedulers.newThread())
         .subscribe(
             object : Subscriber<Genre>() {
@@ -60,7 +60,7 @@ class MainPresenter @Inject constructor(
             }
         )
 
-    Observable.just(genreList).subscribe {  }
+    Observable.just(genreList).subscribe { }
   }
 
   private fun onResponse(genreList: Observable<GetGenres>) {
@@ -95,33 +95,14 @@ class MainPresenter @Inject constructor(
 
   fun getData(): String? {
 
-
-
-    /*if(mDbManager!=null){
-      if(mDbManager.getGenre()?.size!! > 0){
-        return mDbManager?.getGenre()?.get(0)?.name
-      }else{
-        return "genre is null"
-      }
-    }else{
-      return "db is null"
-    }
-
-
-
-    val result = mDbManager.getGenre()?.size!! > 0  getValue() ?: "no result"
-
-    return  result*/
-
-
     return when {
-    mDbManager.getGenre()!!.size>0->{
+      mDbManager.getGenre()!!.size > 0 -> {
 
-      mDbManager.getGenre()?.get(0)?.name
-    }
+        mDbManager.getGenre()?.get(0)?.name
+      }
       else -> {
         "Press Button 1"
       }
     }
-    }
   }
+}
